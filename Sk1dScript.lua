@@ -18,6 +18,7 @@ local function update_script(body)
         file:close()
         util.yield_once()
         util.restart_script()
+        return
     end
     return util.toast("Failed to update script")
 end
@@ -48,5 +49,4 @@ local function check_update()
 end
 
 check_update()
-
 util.keep_running()
