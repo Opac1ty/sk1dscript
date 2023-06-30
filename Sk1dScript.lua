@@ -213,7 +213,6 @@ local function init_player_features(_ROOT, pid) -- Needs a lot of improvements b
                                     end
                                     continue
                                 end
-                                new_value[2][3] = "All Players"
                                 new_value[2][i] = function()
                                     local player_list = players.list_except((vars["exclude_self"] or false), (vars["exclude_friends"] or false), (vars["exclude_crew"] or false), (vars["exclude_org"] or false))
                                     for _,_pid in (vars["exclude_strangers"]) ? table_nand(player_list, players.list(false, false, true)) : player_list do
